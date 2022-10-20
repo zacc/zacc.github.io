@@ -1,0 +1,28 @@
+<html>
+
+
+	<script type="text/javascript">
+
+		window.addEventListener('load', () => {
+			const button = document.querySelector('#start-download');
+			button.addEventListener('click', () => {
+				// const img = document.querySelector('#download-img');
+				const a = document.createElement('a');
+				// a.href = img.getAttribute('src');
+				a.href = "george-peabody-library-g9e9650c81_640.jpg.zip";
+				a.setAttribute('download', '');
+				document.body.appendChild(a);
+				a.click();
+				document.body.removeChild(a);
+			});
+		});
+	</script>
+
+<body>
+
+	<button id="start-download">Download Zip</button>
+	<img id="download-img" src="george-peabody-library-g9e9650c81_640.jpg">
+
+</body>
+
+</html>
